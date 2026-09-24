@@ -61,4 +61,4 @@
 Alirex Labs. に関する活動報告や成果物、お問い合わせについては、各プロジェクトのリポジトリおよび所定の窓口にて受け付けております。
 
 ---
-&copy; 2026 Alirex Labs. (Kanagawa, Japan)
+&copy; 2026 Alirex Labs. (Kawanishi, Japan)
