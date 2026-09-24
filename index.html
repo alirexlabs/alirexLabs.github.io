@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alirex Labs.</title>
-  <meta name="description" content="Alirex Labs.（アリレックス・ラボ）の公式紹介ページ。">
+  <title>Alirex Labs. | ソフトウェアとテクノロジーの研究・開発スタジオ</title>
+  <meta name="description" content="Alirex Labs.（アリレックス・ラボ）は、思考と実装を極限まで近づけ、有用で持続可能なソフトウェアやツールの研究・開発を行うスタジオです。">
+
+  <!-- Google Fonts: 禅デザインシステム準拠（Shippori Mincho / Noto Sans JP / JetBrains Mono） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@500;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,14 +18,24 @@
   <div class="wrapper">
     <!-- Header -->
     <header>
-      <div class="brand">Alirex Labs.</div>
-      <div class="tagline">ソフトウェアとテクノロジーの研究・開発スタジオ</div>
+      <div class="brand-block">
+        <h1 class="brand">Alirex Labs.</h1>
+        <div class="tagline">ソフトウェアとテクノロジーの研究・開発スタジオ</div>
+      </div>
+      <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="テーマ切り替え">
+        <span id="theme-icon">☀️</span>
+        <span id="theme-label">禅 (Zen)</span>
+      </button>
     </header>
 
     <!-- About -->
-    <section>
-      <h2>About</h2>
-      <p>
+    <section id="about">
+      <div class="section-label">
+        <span class="section-label-en">About</span>
+        <span class="section-divider"></span>
+      </div>
+      <h2>思考と実装の調和</h2>
+      <p class="lead">
         Alirex Labs.（アリレックス・ラボ）は、思考と実装を極限まで近づけ、有用で持続可能なソフトウェアやツールの研究・開発を行うスタジオです。
       </p>
       <p>
@@ -31,102 +47,172 @@
     </section>
 
     <!-- Principles -->
-    <section>
-      <h2>Principles</h2>
-      <ul class="simple-list">
-        <li>
-          <strong>顧客価値の最優先</strong>:
-          自己満足の過剰な機能追加を排し、利用者が抱える現実の課題を解決する本質的な体験にリソースを集中します。
-        </li>
-        <li>
-          <strong>事実に基づく判断</strong>:
-          推測や感覚だけに頼らず、計測可能なログ、データ、そして客観的な事実をもとに論理的に設計と意思決定を行います。
-        </li>
-        <li>
-          <strong>知識の企業資産化</strong>:
-          成功のプロセスも失敗の原因も、すべてドキュメントやSOP（標準作業手順）として体系化し、次に活きる持続的な組織資産として蓄積します。
-        </li>
-        <li>
-          <strong>継続的改善</strong>:
-          一度の完成に甘んじることなく、定期的な見直しと小さな改善のサイクルを着実に積み重ね、品質を高め続けます。
-        </li>
-        <li>
-          <strong>最小コストで最大成果</strong>:
-          過度な外部依存や過剰なインフラを持たず、最もシンプルで堅牢な手法を選択して最大のインパクトを生み出します。
-        </li>
-      </ul>
-    </section>
-
-    <!-- Projects -->
-    <section>
-      <h2>Projects</h2>
-      <div class="project-list">
-        <div class="project-item">
-          <div class="project-title">
-            <a href="https://github.com/AlirexLabs/LocalVirtualThinkTank" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-decoration-color: var(--border);">Local Virtual ThinkTank (LVTT) ↗</a>
-            <span class="project-status">Web App / AI System</span>
-          </div>
-          <p class="project-desc">
-            完全プライベートなAIマルチエージェント会議室。外部クラウド送信ゼロ・ローカル推論により、機密情報を安全に扱いながら多角的なアイデア創出と意思決定を支援します。
+    <section id="principles">
+      <div class="section-label">
+        <span class="section-label-en">Principles</span>
+        <span class="section-divider"></span>
+      </div>
+      <h2>行動指針</h2>
+      <div class="principles-grid">
+        <div class="principle-card">
+          <div class="principle-num">01 / PRINCIPLE</div>
+          <div class="principle-title">顧客価値の最優先</div>
+          <p class="principle-body">
+            自己満足の過剰な機能追加を排し、利用者が抱える現実の課題を解決する本質的な体験にリソースを集中します。
           </p>
         </div>
 
-        <div class="project-item">
-          <div class="project-title">
-            <a href="https://github.com/AlirexLabs/Shuhari" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-decoration-color: var(--border);">守破離 (Shuhari) ↗</a>
-            <span class="project-status">Web App / Practice Note</span>
-          </div>
-          <p class="project-desc">
-            武道・芸事・技芸の修練と内省を深める次世代稽古ノートアプリ。AIによる稽古分析・定期レポート、完全ローカルファースト設計で日々の鍛錬を記録・蓄積します。
+        <div class="principle-card">
+          <div class="principle-num">02 / PRINCIPLE</div>
+          <div class="principle-title">事実に基づく判断</div>
+          <p class="principle-body">
+            推測や感覚だけに頼らず、計測可能なログ、データ、そして客観的な事実をもとに論理的に設計と意思決定を行います。
           </p>
         </div>
 
-        <div class="project-item">
-          <div class="project-title">
-            <span>ZoneBreathe</span>
-            <span class="project-status">Mobile App</span>
-          </div>
-          <p class="project-desc">
-            日々の集中とマインドフルネスをサポートする呼吸コンディショニングアプリ。直感的な触覚フィードバックと無駄のないインターフェースで、心身のリズムを整えます。
+        <div class="principle-card">
+          <div class="principle-num">03 / PRINCIPLE</div>
+          <div class="principle-title">知識の企業資産化</div>
+          <p class="principle-body">
+            成功のプロセスも失敗の原因も、すべてドキュメントやSOPとして体系化し、次に活きる持続的な組織資産として蓄積します。
           </p>
         </div>
 
-        <div class="project-item">
-          <div class="project-title">
-            <span>Markdown Web Editor</span>
-            <span class="project-status">Web Tool</span>
-          </div>
-          <p class="project-desc">
-            思考の流れを妨げずに執筆へ集中できるブラウザ完結型エディタ。リアルタイムプレビュー、柔軟なレイアウト調整、HTML/PDFエクスポートなど、日常のドキュメント作成に必要な機能に絞り込んでいます。
+        <div class="principle-card">
+          <div class="principle-num">04 / PRINCIPLE</div>
+          <div class="principle-title">継続的改善</div>
+          <p class="principle-body">
+            一度の完成に甘んじることなく、定期的な見直しと小さな改善のサイクルを着実に積み重ね、品質を高め続けます。
           </p>
         </div>
 
-        <div class="project-item">
-          <div class="project-title">
-            <span>Core Dashboard</span>
-            <span class="project-status">Internal Platform</span>
-          </div>
-          <p class="project-desc">
-            スタジオ内で稼働する複数プロジェクトの進捗、ドキュメント、運用状況を一元的に把握・管理するためのダッシュボード基盤。
+        <div class="principle-card">
+          <div class="principle-num">05 / PRINCIPLE</div>
+          <div class="principle-title">最小コストで最大成果</div>
+          <p class="principle-body">
+            過度な外部依存や過剰なインフラを持たず、最もシンプルで堅牢な手法を選択して最大のインパクトを生み出します。
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Engineering & Architecture -->
-    <section>
-      <h2>Engineering &amp; Quality</h2>
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-label">
+        <span class="section-label-en">Projects</span>
+        <span class="section-divider"></span>
+      </div>
+      <h2>主要プロダクト</h2>
+      <div class="project-stack">
+        <!-- LVTT -->
+        <article class="project-card featured">
+          <div class="project-card-header">
+            <h3 class="project-title">
+              <a href="https://github.com/AlirexLabs/LocalVirtualThinkTank" class="project-link" target="_blank" rel="noopener noreferrer">
+                Local Virtual ThinkTank (LVTT)
+                <span class="arrow-icon">↗</span>
+              </a>
+            </h3>
+            <span class="badge">AI System / Desktop</span>
+          </div>
+          <p class="project-desc">
+            機密情報を扱える完全プライベートなAIマルチエージェント会議室。外部クラウド送信ゼロ・ローカルLLM推論により、情報漏洩を防ぎながら安全にアイデア創出と意思決定を支援します。
+          </p>
+        </article>
+
+        <!-- Shuhari -->
+        <article class="project-card featured">
+          <div class="project-card-header">
+            <h3 class="project-title">
+              <a href="https://github.com/AlirexLabs/Shuhari" class="project-link" target="_blank" rel="noopener noreferrer">
+                守破離 (Shuhari)
+                <span class="arrow-icon">↗</span>
+              </a>
+            </h3>
+            <span class="badge">Web App / Practice Note</span>
+          </div>
+          <p class="project-desc">
+            武道・芸事・技芸の修練と内省を深める次世代稽古ノートアプリ。AIによる稽古分析・定期レポート、完全ローカルファースト設計で日々の鍛錬を記録・蓄積します。
+          </p>
+        </article>
+
+        <!-- ZoneBreathe -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3 class="project-title">ZoneBreathe</h3>
+            <span class="badge">Mobile App</span>
+          </div>
+          <p class="project-desc">
+            日々の集中とマインドフルネスをサポートする呼吸コンディショニングアプリ。直感的な触覚フィードバックと無駄のないインターフェースで、心身のリズムを整えます。
+          </p>
+        </article>
+
+        <!-- Markdown Web Editor -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3 class="project-title">Markdown Web Editor</h3>
+            <span class="badge">Web Tool</span>
+          </div>
+          <p class="project-desc">
+            思考の流れを妨げずに執筆へ集中できるブラウザ完結型エディタ。リアルタイムプレビュー、柔軟なレイアウト調整、HTML/PDFエクスポートに対応。
+          </p>
+        </article>
+
+        <!-- Core Dashboard -->
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3 class="project-title">Core Dashboard</h3>
+            <span class="badge">Internal Platform</span>
+          </div>
+          <p class="project-desc">
+            スタジオ内で稼働する複数プロジェクトの進捗、ドキュメント、運用状況を一元的に把握・管理するためのダッシュボード基盤。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Engineering & Quality -->
+    <section id="engineering">
+      <div class="section-label">
+        <span class="section-label-en">Engineering &amp; Quality</span>
+        <span class="section-divider"></span>
+      </div>
+      <h2>技術と品質の礎</h2>
       <p>
-        ものづくりの持続可能性を担保するため、私たちは「正確性」「再現性」「保守性」「再利用性」の4つを品質の基盤としています。日々の作業手順やノウハウを体系的に整理し、状況に左右されることなく一定の高い水準を維持できる仕組みを敷いています。
+        ものづくりの持続可能性を担保するため、私たちは4つの品質基盤を定義しています。作業手順やノウハウを体系的に整理し、状況に左右されることなく一定の高い水準を維持できる仕組みを敷いています。
       </p>
+
+      <div class="quality-pillars">
+        <div class="pillar-item">
+          <div class="pillar-name-ja">正確性</div>
+          <div class="pillar-name-en">Accuracy</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name-ja">再現性</div>
+          <div class="pillar-name-en">Reproducibility</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name-ja">保守性</div>
+          <div class="pillar-name-en">Maintainability</div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-name-ja">再利用性</div>
+          <div class="pillar-name-en">Reusability</div>
+        </div>
+      </div>
+
       <p>
         また、外部のプラットフォームに依存しすぎず、手元で安全かつ迅速に検証できる独立した開発基盤を構築し、持続的な活動を支えています。
       </p>
     </section>
 
     <!-- Information -->
-    <section>
-      <h2>Information</h2>
+    <section id="contact">
+      <div class="section-label">
+        <span class="section-label-en">Information</span>
+        <span class="section-divider"></span>
+      </div>
+      <h2>お問い合わせ・活動報告</h2>
       <p>
         Alirex Labs. に関する活動報告や成果物、お問い合わせについては各プロジェクトのリポジトリおよび所定の窓口にて受け付けております。
       </p>
@@ -134,10 +220,11 @@
 
     <!-- Footer -->
     <footer>
-      <span>&copy; 2026 Alirex Labs.</span>
-      <span>Kanagawa, Japan</span>
+      <div class="footer-copy">&copy; 2026 Alirex Labs.</div>
+      <div class="footer-location">Kanagawa, Japan</div>
     </footer>
   </div>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
