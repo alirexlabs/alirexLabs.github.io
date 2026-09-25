@@ -1,5 +1,5 @@
 // ==========================================================================
-// 禅 (Zen) & 漆 (Urushi) テーマ切り替えスクリプト
+// 禅 (Zen) & 漆 (Urushi) テーマ切り替えスクリプト (統一キー: alirex-zen-theme)
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeIcon = document.getElementById('theme-icon');
   const themeLabel = document.getElementById('theme-label');
 
-  // 保存されたテーマまたはOSの設定を判定
-  const savedTheme = localStorage.getItem('alirex-theme');
+  // 全サイト共通キー alirex-zen-theme
+  const savedTheme = localStorage.getItem('alirex-zen-theme') || localStorage.getItem('alirex-theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       setTheme(newTheme);
-      localStorage.setItem('alirex-theme', newTheme);
+      localStorage.setItem('alirex-zen-theme', newTheme);
     });
   }
 
