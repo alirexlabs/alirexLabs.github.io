@@ -35,9 +35,9 @@
 
 | プロジェクト | 種別 | 概要 |
 | :--- | :--- | :--- |
-| [**Local Virtual ThinkTank (LVTT)**](https://github.com/AlirexLabs/LocalVirtualThinkTank) | Web App / AI System | 機密情報を扱える完全プライベートなAIマルチエージェント会議室。外部クラウド送信ゼロ・ローカル推論による安全なアイデア発散と意思決定支援システム。 |
-| [**守破離 (Shuhari)**](https://github.com/AlirexLabs/Shuhari) | Web App / Practice Note | 武道・芸事・技芸の修練と内省を深める次世代稽古ノートアプリ。AI稽古分析と完全ローカルファースト設計で日々の鍛錬を記録・蓄積。 |
-| [**Alirex Markdown Editor**](https://github.com/AlirexLabs/AlirexMarkdownEditor) | Web Tool | 思考の流れを妨げずに執筆へ集中できるブラウザ完結型エディタ。リアルタイムプレビュー、柔軟なレイアウト調整、HTML/PDFエクスポートに対応。 |
+| [**Alirex Markdown Editor**](https://alirexlabs.github.io/alirexmarkdowneditor/) | Web Tool | 思考の流れを妨げずに執筆へ集中できるブラウザ完結型エディタ。リアルタイムプレビュー、柔軟なレイアウト調整、HTML/PDFエクスポートに対応。 |
+| [**Local Virtual ThinkTank (LVTT)**](https://alirexlabs.github.io/localvirtualthinktank/) | Web App / AI System | 機密情報を扱える完全プライベートなAIマルチエージェント会議室。外部クラウド送信ゼロ・ローカル推論による安全なアイデア発散と意思決定支援システム。 |
+| [**守破離 (Shuhari)**](https://alirexlabs.github.io/shuhari/) | Web App / Practice Note | 武道・芸事・技芸の修練と内省を深める次世代稽古ノートアプリ。AI稽古分析と完全ローカルファースト設計で日々の鍛錬を記録・蓄積。 |
 
 ---
 
