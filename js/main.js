@@ -25,14 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    if (themeIcon && themeLabel) {
-      if (theme === 'dark') {
-        themeIcon.textContent = '🌙';
-        themeLabel.textContent = '漆 (Urushi)';
-      } else {
-        themeIcon.textContent = '☀️';
-        themeLabel.textContent = '禅 (Zen)';
-      }
+    if (themeIcon) {
+      themeIcon.textContent = theme === 'dark' ? '🌙' : '☀️';
     }
   }
 });
